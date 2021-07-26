@@ -1,0 +1,142 @@
+.App {
+  text-align: center;
+}
+
+.header-div {
+    width: 100%;
+    background: grey;
+    padding: 1%;
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: flex-start;
+}
+
+.head-space {
+    margin-top: 12%;
+}
+
+#logo-pic {
+    height: 5vh;
+    float: left;
+    padding: 1%;
+}
+
+
+.popular-movies {
+    width: 100%;
+    display: flex;
+}
+
+.movie-frame-div {
+    width: 70%;
+    margin: auto;
+}
+
+.movie-frame-div img {
+    max-width: 100%;
+}
+
+.pop-body {
+    margin-top: 20%;
+    margin-bottom: 20%;
+    border-bottom: 2px solid grey;
+}
+
+#pop-header {
+    border-bottom: 2px solid grey;
+}
+
+.link-div {
+    width: 50%;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.home-body {
+    margin-bottom: 10%;
+}
+
+.genre-div {
+    margin-bottom: 20%;
+}
+
+.mag-div img {
+    max-height: 5vh;
+    float: right;
+    padding: 1%;    
+    padding-right: 3%;
+}
+
+.mag-div:hover {
+    cursor: pointer;
+}
+
+#close-searchB:hover {
+    cursor: pointer;
+}
+
+.search-input {
+    float: right;
+    padding-right: 3%;
+}
+
+.search-results-div {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+}
+
+.result-img {
+    width: 100%;
+}
+
+.links-body {
+    margin-bottom: 5%;
+}
+
+.totop-div {
+    position: fixed;
+    width: 10%;
+    top: 90vh;
+    left:85vw;
+    background: grey;
+    max-height: 7vh;
+    padding: 1%;
+    border-radius: 5px;
+    border: 1px solid silver;
+}
+
+.totop-div p {
+    margin: auto;
+}
+
+.totop-div:hover {
+    cursor: pointer;
+}
+
+
+.untouched {
+    pointer-events: none;
+}
+
+
+
+
+
+@media screen and (max-width: 500px){
+    
+    .popular-movies {
+        overflow-x: scroll;
+    }
+    
+    
+    .movie-frame-div {
+        min-width: 100vw;
+    }
+        
+    
+}
