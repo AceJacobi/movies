@@ -21,11 +21,15 @@ class Home extends React.Component {
         
         return(
             <div className='home-body'>
-            <h1 className='head-space'>Movies</h1>
-              <hr />
-              <PopularMovies {...p} movies={popular} />
-              
-            <Links />
+            
+                <h1 className='head-space'>Movies</h1>
+
+                <hr />
+
+                <PopularMovies {...p} movies={popular} />
+
+                <Links />
+    
             </div>
         )
         
