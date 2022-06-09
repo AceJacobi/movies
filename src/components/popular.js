@@ -14,21 +14,27 @@ class PopularMovies extends React.Component{
     render(){
                     
         return(
+            
         <div className='pop-body'>
+            
             <h2 id='pop-header'>Popular</h2>
             
             <div className='popular-movies'>
-            {this.props.movies.map((movie)=>{
-            var p = this.props;
-            return(<MovieFrame 
-                {...p}
-                key={helper.idKey()}
-                img={movie.img} 
-                title={movie.title} 
-                rating={movie.rating} 
-                score={movie.score} 
-            />
-            )})}
+            
+                {this.props.movies.map((movie)=>{
+            
+                    var p = this.props;
+            
+                    return(
+                        <MovieFrame 
+                        {...p}
+                        key={helper.idKey()}
+                        img={movie.img} 
+                        title={movie.title} 
+                        rating={movie.rating} 
+                        score={movie.score} 
+                    />)
+                })}
             </div>
             
         </div>
