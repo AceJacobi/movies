@@ -122,18 +122,31 @@ class App extends React.Component{
     render(){
         return (
             <div className="App">
+            
               <BrowserRouter>
+            
                 <Header movies={this.state.movies} />
+
                 <Switch>
+            
                     <Route path='/comedy' component={(props)=>(<Genre {...props} movies={this.state.movies} head={'Comedy'} /> )} />
+
                     <Route path='/action' component={(props)=>(<Genre {...props} movies={this.state.movies} head={'Action'} /> )} />
+
                     <Route path='/scifi' component={(props)=>(<Genre {...props} movies={this.state.movies} head={'Scifi'} /> )} />
+
                     <Route path='/drama' component={(props)=>(<Genre {...props} movies={this.state.movies} head={'Drama'} /> )} />
+
                     <Route path='/allmovies' component={(props)=>(<Genre {...props} movies={this.state.movies} head={'All Movies'} /> )} />
+
                     <Route path='/movies/:movie' component={(props)=>(<Result movies={this.state.movies} {...props}/> )} />         
+                        
                     <Route path='/' component={(props)=>(<Home {...props} movies={this.state.movies}/>)} />
+
                 </Switch>
+
               </BrowserRouter>
+
             </div>
         );
     }
