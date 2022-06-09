@@ -35,6 +35,7 @@ class Topper extends React.Component{
                 show: true
             })
         }
+        
         else {
             this.setState({
                 show: false
@@ -45,10 +46,13 @@ class Topper extends React.Component{
     render(){
     
         if(this.state.show){
+            
             return (
-            <div className='totop-div' onClick={toTop}>
-                <p>Top</p>
-            </div>
+                <div className='totop-div' onClick={toTop}>
+                
+                    <p>Top</p>
+        
+                </div>
             )
         }
         else {
