@@ -20,9 +20,11 @@ class Genre extends React.Component{
     render(){
         
         var specificFilms = this.props.movies.filter((movie)=>{
+            
             if(this.props.head === movie.genre){
                 return movie;
             }
+            
             else if(this.props.head === 'All Movies'){
                 return movie;
             }
@@ -34,7 +36,7 @@ class Genre extends React.Component{
         if(this.props.head === 'All Movies'){
             
             const popMovies = this.props.movies.sort((a,b)=>{
-            return b.score - a.score;
+                return b.score - a.score;
             })
         
             var popular = popMovies.slice(0,3);
@@ -46,15 +48,20 @@ class Genre extends React.Component{
                 if(a.title[0] < b.title[0]){
                     return -1;
                 }
+                
                 else if(a.title[0] == b.title[0]){
+                    
                     if(a.title[1] < b.title[1]){
                         return -1
                     }
+                    
                     else if(a.title[1] > b.title[1]){
                         return 1;
                     }
+                    
                     return 0;
                 }
+                
                 else {
                     return 1;
                 }
@@ -64,17 +71,24 @@ class Genre extends React.Component{
             
             return (
             <div className='genre-div'>
+                
                 <h1 className='head-space'>{header}</h1>
+        
                 <Topper />
+                
                 <hr />
                 
                 <PopularMovies {...p} movies={popular} />
+                    
                 <hr />
                 
                 {alpha.map((movie)=>{
+                    
                     var p = this.props;
+                    
                         return (
                             <div>
+                            
                             <MovieFrame 
                                 {...p}
                                 key={helper.idKey()}
@@ -83,7 +97,9 @@ class Genre extends React.Component{
                                 rating={movie.rating}
                                 score={movie.score}
                             />
+    
                             <hr />
+    
                         </div>)
             })}
     
@@ -98,12 +114,17 @@ class Genre extends React.Component{
                     
         return (
                 <div className='genre-div'>
+            
                     <h1 className='head-space'>{header}</h1>
-
+    
                     <hr />
+            
                     {specificFilms.map((movie)=>{
                         var p = this.props;
-                        return(<div>
+                        
+                        return(
+                            <div>
+                            
                             <MovieFrame 
                                 {...p}
                                 key={helper.idKey()}
@@ -112,7 +133,9 @@ class Genre extends React.Component{
                                 rating={movie.rating}
                                 score={movie.score}
                             />
+                                    
                             <hr />
+                                    
                         </div>
                         )})}
 
